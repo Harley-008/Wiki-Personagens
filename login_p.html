@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="cadas_loginP.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <script src="login_cadas.js"></script>
+</head>
+<body>
+    <form action="projeto.html">
+        <div id="caixa_M">
+            <h2>Login</h2>
+
+            <div class="inpt_box">
+                <input type="email" id="email" placeholder="Email" onkeyup="escrever()" required>
+            </div>
+            <div class="inpt_box">
+                <input type="password" placeholder="Senha" id="key" required onkeyup="senha()">
+                <img src="Olhos_Fechados.png" class="foto" onclick="SenhaUnlock('key', this)" alt="">
+            </div>
+
+            <div id="b_box">
+                <button id="botao" onclick="return ValidarL()">Entrar</button>
+            </div>
+
+            <div id="contas">
+                <p>Já tem uma conta ? <a href="cadastro_p.html">Cadastres-se!</a></p>
+            </div>
+        </div>
+    </form>
+    
+    <div class="information">
+        <!-- <div id="info1_2"><span id="info1"></span></div> -->
+        <div id="info2_2"><span id="info2"></span></div>
+        <div id="info3_2"><span id="info3"></span></div>
+    </div>
+</body>
+</html>

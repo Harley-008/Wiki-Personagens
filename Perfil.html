@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuário</title>
+    <link rel="icon" type="image/x-icon" href="sem-img-perfil.jpg">
+    <link rel="stylesheet" href="Perfil.css">
+</head>
+<body>
+    <header>
+        <h1>Perfil</h1>
+        <p>Bem-vindo ao seu perfil!</p>
+        <div class="caixa_menu">
+            <ul class="menu">
+                <li><a href="projeto.html">Home</a></li>
+                <li><a href="login_p.html">Login</a></li>
+                <li><a href="historico.html">Historico</a></li>
+                <li><a href="projeto2_per.html">Personagens</a></li>
+            </ul>
+        </div>
+    </header>
+<br>
+    <section>
+        <h2 id="informacoes-perfil">Informações do Perfil</h2>
+        <p id="informacoes-perfil-descricao">Preencha os campos abaixo para atualizar seu perfil:</p>
+
+        <div class="info-perfil">
+            <div class="foto-perfil">
+                <div id="img-perfil"></div>
+                <label for="foto_perfil" id="label_foto" onmouseenter="DicaImg()" onmouseleave="EsconderDica()"><img src="Edit.png"></label>
+                <input type="file" name="foto_perfil" id="foto_perfil" accept="image/*" onchange="previewImage(event)">
+            </div>
+
+            <div id="formulario" class="formulario">
+                Nome: <input type="text" id="nome" placeholder="Digite seu nome">
+                <br>
+                Email: <input type="email" id="email" placeholder="Digite seu email">
+                <br>
+                Idade: <input type="number" id="idade" placeholder="Digite sua idade">
+                <br>
+                Localização: <input type="text" id="localizacao" placeholder="Digite sua localização">
+                <br>
+                Interesses: <input type="text" id="interesses" placeholder="Digite seus interesses">
+                <br>
+                Redes Sociais: <input type="text" id="redes_sociais" placeholder="Links para suas redes sociais">
+                <br>
+            </div>
+
+            <button id="salvar" onclick="SalvarDados()"> Salvar</button>
+            <button id="limpar" onclick="LimparDados()"> Limpar</button>
+        </div>
+
+        <h2>Dados do Perfil</h2>
+        <div class="resultado">
+            <div class="dados" id="dados">
+                <h3>Nome:</h3> <input type="text" id="dados-nome" readonly>
+                <h3>Email:</h3> <input type="text" id="dados-email" readonly>
+                <h3>Idade:</h3> <input type="text" id="dados-idade" readonly>
+                <h3>Localização:</h3> <input type="text" id="dados-localizacao" readonly>
+                <h3>Interesses:</h3> <input type="text" id="dados-interesses" readonly>
+                <h3>Redes Sociais:</h3> <input type="text" id="dados-redes_sociais" readonly>
+            </div>
+            <div class="acoes">
+                <button id="editar" onclick="EditarDados()">Editar</button>
+                <button id="excluir" onclick="return verificarModal()">Excluir</button>
+            </div>
+        </div>
+
+        <div class="mensagem" id="mensagem"></div>
+        
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close" id="fechar">&times;</span>
+                <p>Deseja realmente excluir seu perfil?</p>
+                <button id="confirmar-exclusao" onclick="confirmarExclusao()">Confirmar</button>
+                <button id="cancelar-exclusao" onclick="cancelarExclusao()">Cancelar</button>
+            </div>
+        </div>
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+    </section>
+    
+    <script src="Perfil.js"></script>
+</body>
+</html>

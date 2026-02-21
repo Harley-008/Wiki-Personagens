@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo-principal: #121221;
+    --cor-fundo-caixas: #1F1F2E;
+    --cor-texto-principal: #E5E5F0;
+    --cor-bordas-links-des: #7A5FFF;
+    --cor-in_leves-hover: #00E0DC;
+    --cor-botao-padrao: #F5F5F5;
+    --cor-botao-hover: #7A5FFF;
+    --texto-especial: #FFD86E;
+    --cor-texto-hover: #181848;
+    --cor-fundo-caixas-menores: #2A2A3C
+}
+
+body{
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+a{
+    color: var(--cor-bordas-links-des);
+    text-decoration: none;
+    transition: 0.3s ease color;
+}
+a:hover{
+    color: var(--cor-in_leves-hover);
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--cor-texto-principal);
+    font-weight: 600;
+}
+
+p{
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.search{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    background-color: var(--cor-botao-padrao);
+    font-size: 16px;
+    font-weight: 600;
+    width: 45px;
+    height: 45px;
+    border: none;
+    /* padding: 10px 20px; */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease background-color;
+    margin: auto auto;
+}
+button img{
+    width: 50%;
+    height: 50%;
+    filter: invert(1);
+    margin: auto auto;
+}
+
+button:hover{
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-texto-hover);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    button img {
+        content: url("Buscar_hover.png");
+    }
+}
+
+#info_busca{
+    color: red;
+    font-size: 16px;
+    position: absolute;
+    top: 41vh;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s ease;
+}
+
+input, textarea{
+    background-color: var(--cor-fundo-caixas);
+    color: var(--cor-texto-principal);
+    border: 1px solid var(--cor-bordas-links-des);
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+    height: 50px;
+    font-size: 16px;
+    transition: 0.3s ease border-color;
+}
+
+input:focus, textarea:focus{
+    border-color: var(--cor-in_leves-hover);
+    outline: none;
+}
+
+.content{
+    height: 75vh;
+    margin: 20px auto;
+    text-align: left;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-fundo-caixas);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 50%;
+    max-width: 800px;
+}
+.content h2{
+    font-size: 30px;
+    gap: 10px;
+    color: var(--texto-especial);
+    text-decoration: 1px underline var(--cor-bordas-links-des);
+    font-family: 'Poppins', sans-serif;
+}
+
+.content p{
+    font-size: 18px;
+    color: var(--cor-texto-principal);
+    margin: 10px 0;
+}
+
+.sidebar{
+    width: 45%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: var(--cor-fundo-caixas);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 75vh;
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar ul li, .sidebar ul li a{
+    margin: 10px 0;
+    font-size: 30px;
+    color: var(--cor-texto-principal);
+    text-shadow: var(--cor-bordas-links-des) 1px 1px 2px;
+    transition: 0.3s ease var(--cor-in_leves-hover);
+    width: 100%;
+    text-align: center;
+}
+.sidebar ul li a:hover{
+    color: var(--cor-in_leves-hover);
+    text-shadow: var(--cor-bordas-links-des) 1px 1px 2px;
+    text-decoration: 1px underline var(--cor-bordas-links-des);
+    transition: 1s ease color;
+}
+.sidebar h2{
+    font-size: 30px;
+    gap: 10px;
+    color: var(--texto-especial);
+    text-decoration: 1px underline var(--cor-bordas-links-des);
+    font-family: 'Poppins', sans-serif;
+}
+
+.caixa_CS{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+    background-color: transparent;
+}
+
+header{
+    background-color: var(--cor-fundo-caixas);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    border-radius: 15px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+}
+header h1{
+    font-size: 40px;
+    margin: 0 0 15px 0;
+    color: var(--texto-especial);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.caixa_menu{
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+    border-bottom: var(--cor-fundo-principal) 2px solid;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 0;
+}
+.menu li{
+    margin: 0 10px;
+    text-shadow: var(--cor-bordas-links-des) 1px 1px 2px;
+    transition: 0.3s ease color;
+}
+/* .menu li:hover{
+    color: var(--cor-in_leves-hover);
+    text-shadow: var(--cor-in_leves-hover) 1px 1px 2px;
+} */
+.menu li a{
+    color: var(--cor-texto-principal);
+    text-decoration: none;
+    transition: 0.3s ease color;
+}
+.menu li a:hover{
+    color: var(--cor-bordas-links-des);
+}
+
+footer{
+    background-color: var(--cor-fundo-caixas);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* #persona{
+    width: 100%;
+    height: 50vh;
+    margin: 20px auto;
+    background-color: var(--cor-fundo-caixas);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+.personagens{
+    width: 15vw;
+    height: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--cor-fundo-principal);
+    background-color: var(--cor-fundo-caixas);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+.personagens img{
+    width: 70%;
+    height: 50%;
+    border-radius: 10px;
+    border: 1px solid var(--cor-fundo-principal);
+    padding: 5px;
+}
+.information{
+    width: 100%;
+    text-align: left;
+    color: var(--cor-texto-principal);
+    gap: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: start;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+.information h3{
+    color: var(--texto-especial);
+    font-size: 16px;
+    margin: 5px 0;
+}
+.information p{
+    color: var(--cor-texto-principal);
+    font-size: 14px;
+    margin: 0;
+    font-weight: 500;
+} */
+
+.caixa_2{
+    width: 99%;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px auto;
+    gap: 5px;
+    border-radius: 15px;
+    background-color: var(--cor-fundo-caixas);
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto-principal);
+    font-size: 16px;    
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+.caixa_2 h2{
+    font-size: 32px;
+    color: var(--texto-especial);
+    text-decoration: 1px underline var(--cor-bordas-links-des);
+    font-family: 'Poppins', sans-serif;
+}
+.caixa_2 p{
+    font-size: 18px;
+    color: var(--cor-texto-principal);
+    margin: 10px 0;
+}
+.caixa_2 #objetivo{
+    font-size: 18px;
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-fundo-caixas-menores);
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+}
+.caixa_2 #objetivo h3{
+    font-size: 24px;
+    color: var(--texto-especial);
+    text-decoration: 1px underline var(--cor-bordas-links-des);
+    font-family: 'Poppins', sans-serif;
+}
+.caixa_2 #objetivo p{
+    background-color: var(--cor-fundo-principal);
+    padding-left: 10px;
+    border-left: 5px solid var(--cor-bordas-links-des);
+    margin: 10px 0;
+    font-size: 16px;
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.caixa_2 #objetivo p span{
+    color: var(--cor-in_leves-hover);
+    font-weight: 600;
+}
+.caixa_2 #objetivo ol{
+    padding-left: 15px;
+    margin: 10px 0;
+    color: var(--cor-texto-principal);    
+}
+.caixa_2 #objetivo ol h4{
+    font-size: 20px;
+    color: var(--texto-especial);
+    text-decoration: 1px underline var(--cor-bordas-links-des);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    left: -15px;
+    margin-bottom: 10px;
+}
+.caixa_2 #objetivo ol li{
+    font-size: 16px;
+    color: var(--cor-texto-principal);
+    margin: 5px 0;
+    line-height: 1.6;
+    font-weight: 500;
+    position: relative;
+    padding-left: 20px;
+}
+.caixa_2  #missao, .caixa_2 #visao{
+    font-size: 18px;
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-fundo-caixas-menores);
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+}
+.caixa_2 #missao h3, .caixa_2 #visao h3{
+    font-size: 24px;
+    color: var(--texto-especial);
+    text-decoration: 1px underline var(--cor-bordas-links-des);
+    font-family: 'Poppins', sans-serif;
+}
+.caixa_2 #missao p, .caixa_2 #visao p{
+    background-color: var(--cor-fundo-principal);
+    padding-left: 10px;
+    border-left: 5px solid var(--cor-bordas-links-des);
+    margin: 10px 0;
+    font-size: 16px;
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.caixa_2 #valores{
+    font-size: 18px;
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-fundo-caixas-menores);
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+}
+.caixa_2 #valores h3{
+    font-size: 24px;
+    color: var(--texto-especial);
+    text-decoration: 1px underline var(--cor-bordas-links-des);
+    font-family: 'Poppins', sans-serif;
+}
+.caixa_2 #valores ul{
+    padding-left: 15px;
+    margin: 10px 0;
+    color: var(--cor-texto-principal);
+}
+.caixa_2 #valores ul li{
+    font-size: 16px;
+    color: var(--cor-texto-principal);
+    margin: 5px 0;
+    line-height: 1.6;
+    font-weight: 500;
+    position: relative;
+    padding-left: 20px;
+    list-style-type: disc;
+    list-style-position: inside;
+}

@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-fundo-principal: #121221;
+    --cor-fundo-caixas: #1F1F2E;
+    --cor-texto-principal: #E5E5F0;
+    --cor-bordas-links-des: #7A5FFF;
+    --cor-in_leves-hover: #00E0DC;
+    --cor-botao-padrao: #F5F5F5;
+    --cor-botao-hover: #7A5FFF;
+    --texto-especial: #FFD86E;
+    --cor-texto-hover: #181848;
+    --cor-fundo-caixas-menores: #2A2A3C;
+    --cor-fundo-caixas-rodape: #1F1F2E;
+}
+
+body{
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    overflow-x: hidden;
+    margin: 0;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+header{
+    width: 100%;
+    height: 20vh;
+    background-color: var(--cor-fundo-caixas);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+header h1{
+    padding: 10px;
+    font-size: 40px;
+    margin: 0 0 15px 0;
+    color: var(--texto-especial);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.persona-body{
+    width: 100%;
+    height: 400px;
+    margin: 20px;
+    padding: 10px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--cor-fundo-caixas);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+.persona-body img{
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    object-fit: cover;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+.persona-body .persona-details{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+.persona-body .persona-details h2{
+    color: var(--texto-especial);
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.persona-body .persona-details p{
+    color: var(--cor-texto-principal);
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.persona-legs{
+    width: 100%;
+    height: auto;
+    background-color: var(--cor-fundo-caixas);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+    gap: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.persona-legs .persona-description{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--cor-fundo-caixas-menores);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+.persona-legs .persona-description h2{
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto-especial);
+    font-size: 2rem;
+    margin-left: 25px;
+    font-weight: 600;
+}
+.persona-legs .persona-description p{
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto-principal);
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: var(--cor-fundo-principal);
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+    text-align: justify;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: none;
+}
+.persona-legs .persona-actions{
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+.persona-legs .persona-actions button{
+    width: 30%;
+    height: 50px;
+    background-color: var(--cor-botao-padrao);
+    border-radius: 25px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: 0.3s ease background, 0.3s ease color;
+}
+.persona-legs .persona-actions button:hover{
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-texto-principal);
+}
+.persona-legs .persona-actions button:active{
+    background-color: var(--cor-botao-padrao);
+    color: #000;
+    transition: 0.2s ease background, 0.2s ease color;
+}

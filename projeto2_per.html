@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagens</title>
+    <link rel="stylesheet" href="projeto2_per.css">
+    <link rel="stylesheet" href="responsivo.css">
+</head>
+<body>
+    <header>
+        <h1>Personagens</h1>
+        <div class="caixa_menu">
+            <ul class="menu">
+                <li><a href="projeto.html">Home</a></li>
+                <li><a href="Perfil.html">Perfil</a></li>
+                <li><a href="historico.html">Historico</a></li>
+                <li><a href="projeto2_per.html">Personagens</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="slider">
+        
+        <div class="slides">
+            <input type="radio" name="raido_btn" id="radio-1">
+            <input type="radio" name="raido_btn" id="radio-2">
+            <input type="radio" name="raido_btn" id="radio-3">
+            <input type="radio" name="raido_btn" id="radio-4">
+
+            <div class="slide first">
+                <img src="numero_1.jpg" alt="Slide 1">
+                <h2>Harry Potter</h2>
+                <h3>Harry Potter (J.K. Rowling)</h3>
+            </div>
+            
+            
+            <div class="slide">
+                <img src="numero_2.jpg" alt="Slide 2">
+                <h2>Darth Vader</h2>
+                <h3>Star Wars</h3>
+            </div>
+            
+
+            <div class="slide">
+                <img src="numero_3.jpg" alt="Slide 3">
+                <h2>Homem Aranha</h2>
+                <h3>Homem Aranha (Marvel Comics)</h3>
+            </div>
+
+            <div class="slide">
+                <img src="numero_4.jpg" alt="Slide 4">
+                <h2>Jon Snow</h2>
+                <h3>Game of Thrones (George R.R. Martin)</h3>
+            </div>
+
+            <div class="navegation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        
+        </div>
+        
+        <div class="manual-navegation">
+            <label for="radio-1" class="manual-btn"></label>
+            <label for="radio-2" class="manual-btn"></label>
+            <label for="radio-3" class="manual-btn"></label>
+            <label for="radio-4" class="manual-btn"></label>
+        </div>
+
+    </section>
+
+    <section class="carrosel-2">
+        <h2>Personagens em Alta</h2>
+        <div class="carrosel_contener-2">
+
+            <div class="prev">
+                <button>&#10094;</button>
+            </div>
+            
+            <div class="carrosel_item-2 active" onclick="mostrarDados('wan-addans')">
+                <img src="persona-n1.jpg" alt="Wandinha" id="Wandinha">
+                <h3>Wandinha Addans</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel_item-2 active" onclick="mostrarDados('maomao')">
+                <img src="persona-n2(maomao).jpg" alt="Maomao" id="Maomao">
+                <h3>Maomao</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel_item-2 active" onclick="mostrarDados('Jeff')">
+                <img src="persona-n3(jeff).jpg" alt="Jeff(Marvel)" id="Jeff">
+                <h3>Jeff</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel_item-2 active" onclick="mostrarDados('satoru-gojo')">
+                <img src="persona-n4(Satoru_Gojo).jpg" alt="Satoru Gojo(Jujutsu Kaisen)" id="SatoruGojo">
+                <h3>Satoru Gojo</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel_item-2 active" onclick="mostrarDados('geralt-of-rivia')">
+                <img src="persona-n5(Gerald).jpg" alt="Geralt of Rivia (The Witcher)" id="Geralt">
+                <h3>Gerald of Rivia</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel_item-2" onclick="mostrarDados('denji')">
+                <img src="persona-n6(denji).jpg" alt="Denji (Chainsaw Man)" id="Denji">
+                <h3>Denji</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel_item-2" onclick="mostrarDados('yor-forger')">
+                <img src="persona-n7(Yor_Forger).jpg" alt="Yor Forger" id="Yor">
+                <h3>Yor Forger</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel_item-2" onclick="mostrarDados('cloud-strife')">
+                <img src="persona-n8(Cloud_Strife).jpg" alt="Cloud Strife" id="Cloud">
+                <h3>Cloud Strife</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel_item-2" onclick="mostrarDados('batman')">
+                <img src="persona-n9(Batman).jpg" alt="Batman" id="Batman">
+                <h3>Batman</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel_item-2" onclick="mostrarDados('sonho-morpheus')">
+                <img src="persona-n10(Sandman).jpg" alt="Sonho/Morpheus" id="Sonho">
+                <h3>Morpheus/Sonho</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="next">
+                <button>&#10095;</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="carrosel-3">
+        <h2>Personagens de Filmes</h2>
+        <div class="carrosel_contener-3">
+            
+            <div class="prev">
+                <button>&#10094;</button>
+            </div>
+            
+            <div class="carrosel-item-3 active" onclick="mostrarDados('wan-addans')">
+                <img src="persona-n1.jpg" alt="Wandinha">
+                <h3>Wandinha Addams</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel-item-3 active" onclick="mostrarDados('maomao')">
+                <img src="persona-n2(maomao).jpg" alt="Maomao">
+                <h3>Maomao</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel-item-3 active" onclick="mostrarDados('Jeff')">
+                <img src="persona-n3(jeff).jpg" alt="Jeff(Marvel)">
+                <h3>Jeff</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel-item-3 active" onclick="mostrarDados('satoru-gojo')">
+                <img src="persona-n4(Satoru_Gojo).jpg" alt="Satoru Gojo(Jujutsu Kaisen)">
+                <h3>Satoru Gojo</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel-item-3 active" onclick="mostrarDados('geralt-of-rivia')">
+                <img src="persona-n5(Gerald).jpg" alt="Geralt of Rivia (The Witcher)">
+                <h3>Geralt of Rivia</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel-item-3" onclick="mostrarDados('denji')">
+                <img src="persona-n6(denji).jpg" alt="Denji (Chainsaw Man)">
+                <h3>Denji</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel-item-3" onclick="mostrarDados('yor-forger')">
+                <img src="persona-n7(Yor_Forger).jpg" alt="Yor Forger">
+                <h3>Yor Forger</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel-item-3" onclick="mostrarDados('cloud-strife')">
+                <img src="persona-n8(Cloud_Strife).jpg" alt="Cloud Strife">
+                <h3>Cloud Strife</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel-item-3" onclick="mostrarDados('batman')">
+                <img src="persona-n9(Batman).jpg" alt="Batman">
+                <h3>Batman</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="carrosel-item-3" onclick="mostrarDados('sonho-morpheus')">
+                <img src="persona-n10(Sandman).jpg" alt="Sonho/Morpheus">
+                <h3>Morpheus/Sonho</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="next">
+                <button>&#10095;</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="carrosel-4">
+        <h2>Personagens de Séries</h2>
+        <div class="carrosel_contener-4">
+
+            <div class="prev">
+                <button>&#10094;</button>
+            </div>
+
+            <div class="carrosel-item-4 active">
+                <img src="persona-n1.jpg" alt="Wandinha">
+                <h3>Wandinha Addams</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel-item-4 active">
+                <img src="persona-n2(maomao).jpg" alt="Maomao">
+                <h3>Maomao</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel-item-4 active">
+                <img src="persona-n3(jeff).jpg" alt="Jeff(Marvel)">
+                <h3>Jeff</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel-item-4 active">
+                <img src="persona-n4(Satoru_Gojo).jpg" alt="Satoru Gojo(Jujutsu Kaisen)">
+                <h3>Satoru Gojo</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel-item-4 active">
+                <img src="persona-n5(Gerald).jpg" alt="Geralt of Rivia (The Witcher)">
+                <h3>Geralt of Rivia</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel-item-4">
+                <img src="persona-n6(denji).jpg" alt="">
+                <h3>Denji</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel-item-4">
+                <img src="persona-n7(Yor_Forger).jpg" alt="Yor Forger">
+                <h3>Yor Forger</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel-item-4">
+                <img src="persona-n8(Cloud_Strife).jpg" alt="Cloud Strife">
+                <h3>Cloud Strife</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel-item-4">
+                <img src="persona-n9(Batman).jpg" alt="Batman">
+                <h3>Batman</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+
+            <div class="carrosel-item-4">
+                <img src="persona-n10(Sandman).jpg" alt="Sonho/Morpheus">
+                <h3>Morpheus/Sonho</h3>
+                <p>
+                    descrição...
+                </p>
+            </div>
+            
+            <div class="next">
+                <button>&#10095;</button>
+            </div>
+        
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Projeto 2025 todos os direitos reservados</p>
+        <p>Desenvolvimento por Harley Miqueias</p>
+    </footer>
+
+    <script src="projeto2_per.js"></script>
+</body>
+</html>

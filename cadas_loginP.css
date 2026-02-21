@@ -1,0 +1,136 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo-principal: #121221;
+    --cor-fundo-caixas: #1F1F2E;
+    --cor-texto-principal: #E5E5F0;
+    --cor-bordas-links-des: #7A5FFF;
+    --cor-in_leves-hover: #00E0DC;
+    --cor-botao-padrao: #F5F5F5;
+    --cor-botao-hover: #7A5FFF;
+    --texto-especial: #FFD86E;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--cor-fundo-principal);
+}
+
+form {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--cor-bordas-links-des);
+    background-color: transparent;
+}
+
+#caixa_M {
+    height: 75%;
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--cor-texto-principal);
+}
+
+#caixa_M h2 {
+    font-size: 48px;
+}
+
+.inpt_box, .inpt_box input {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid var(--cor-bordas-links-des);
+    background-color: var(--cor-fundo-caixas);
+    color: white;
+    text-align: center;
+}
+
+.inpt_box input::placeholder {
+    text-align: center;
+    font-size: 18px;
+    color: var(--cor-texto-principal);
+}
+
+#b_box {
+    width: 100%;
+    height: 40px;
+}
+
+#botao {
+    width: 70%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: var(--cor-botao-padrao);
+    color: black;
+    border: 2px solid var(--cor-bordas-links-des);
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.2) 0px 18px 36px -18px inset;
+}
+
+#botao:hover {
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-texto-principal);
+    border: 2px solid var(--cor-bordas-links-des);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#contas {
+    font-size: 20px;
+}
+
+#contas a {
+    color: var(--cor-bordas-links-des);
+    text-decoration: none;
+}
+#contas a:hover{
+    color: var(--cor-in_leves-hover);
+}
+
+.information {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 1px solid var(--cor-bordas-links-des);
+    background-color: transparent;
+}
+
+.information div {
+    width: 50%;
+    height: 150px;
+    border: 1px solid var(--cor-bordas-links-des);
+    background-color: var(--cor-fundo-principal);
+    color: var(--texto-especial);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: 1s ease;
+}
+
+.foto{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.inpt_box:hover{
+    background-color: var(--cor-bordas-links-des);
+}

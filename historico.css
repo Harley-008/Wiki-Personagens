@@ -1,0 +1,172 @@
+:root {
+    --cor-fundo-principal: #121221;
+    --cor-fundo-caixas: #1F1F2E;
+    --cor-texto-principal: #E5E5F0;
+    --cor-bordas-links-des: #7A5FFF;
+    --cor-in_leves-hover: #00E0DC;
+    --cor-botao-padrao: #F5F5F5;
+    --cor-botao-hover: #7A5FFF;
+    --cor-texto-especial: #FFD86E;
+    --cor-texto-hover: #181848;
+    --cor-fundo-caixas-menores: #2A2A3C
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: var(--cor-fundo-caixas);
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+}
+header h1{
+    font-size: 40px;
+    margin: 0 0 15px 0;
+    color: var(--cor-texto-especial);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.caixa_menu{
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+    border-bottom: var(--cor-fundo-principal) 2px solid;
+}
+
+.caixa_menu .menu{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 0;
+}
+.caixa_menu .menu li{
+    margin: 0 10px;
+    text-shadow: var(--cor-bordas-links-des) 1px 1px 2px;
+    transition: 0.3s ease color;
+}
+.caixa_menu .menu li a{
+    color: var(--cor-texto-principal);
+    text-decoration: none;
+    transition: 0.3s ease color;
+}
+.caixa_menu .menu li a:hover{
+    color: var(--cor-bordas-links-des);
+}
+
+section{
+    width: 100%;
+    height: auto;
+    background-color: var(--cor-fundo-caixas);
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+section #Limpar-his{
+    width: 25%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background-color: var(--cor-botao-padrao);
+    color: var(--cor-fundo-principal);
+    transition: 0.5s ease background-color, 0.5s ease color;
+}
+section #Limpar-his:hover{
+    background-color: var(--cor-botao-hover);
+    color: var(--cor-texto-principal);
+    transition: 0.5s ease background-color, 0.5s ease color;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+section .corpo-his{
+    width: 100%;
+    height: 25%;
+    padding: 5px;
+    background-color: var(--cor-fundo-caixas-menores);
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+section .corpo-his:not(:last-child){
+    margin-bottom: 15px;
+}
+section .corpo-his .his-principal{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: var(--cor-fundo-principal);
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .corpo-his .his-principal img{
+    width: 200px;
+    border-radius: 20px;
+    border: 3px solid var(--cor-botao-padrao);
+
+}
+section .corpo-his .his-principal .his-text{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    gap: 17vh;
+}
+section .corpo-his .his-principal .his-text h3{
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto-especial);
+    font-weight: 600;
+}
+section .corpo-his .his-principal .his-text p{
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto-principal);
+    font-weight: 400;
+    opacity: 0;
+}
+section .corpo-his:hover{
+    transform: scale(0.99);
+    transition: 0.5s ease transform;
+}
+section .corpo-his:hover .his-principal .his-text p{
+    color: var(--cor-in_leves-hover);
+}
+section .corpo-his:hover .his-principal img{
+    filter: brightness(0.8);
+}
+section .corpo-his:hover .his-principal img,
+section .corpo-his:hover .his-principal .his-text p,
+section .corpo-his:hover .his-principal .his-text h3{
+    transform: scale(1.06);
+    opacity: 1;
+    transition: 0.5s ease transform, 0.3s ease-in-out opacity;
+}
